@@ -11,22 +11,21 @@ with open(os.path.join(here, 'README.rst'), 'r', 'utf-8') as handle:
     readme = handle.read()
 
 setup(
-    name='sqlalchemy-filters',
-    version='0.12.0',
+    name='sqlalchemy-filters-2',
+    version='0.1.0',
     description='A library to filter SQLAlchemy queries.',
     long_description=readme,
     long_description_content_type='text/x-rst',
-    author='Student.com',
-    author_email='wearehiring@student.com',
-    url='https://github.com/juliotrigo/sqlalchemy-filters',
+    author='Saurabh',
+    author_email='tewary.saurabh@hotmail.com',
+    url='https://github.com/saurabht85/sqlalchemy-filters',
     packages=find_packages(exclude=['test', 'test.*']),
-    install_requires=['sqlalchemy>=1.0.16', 'six>=1.10.0'],
+    install_requires=['sqlalchemy>=1.4.0', 'six>=1.10.0'],
     extras_require={
         'dev': [
             'pytest>=4.6.9',
             'coverage~=5.0.4',
-            # for sqlalchemy1.4 >= 0.37 is required
-            'sqlalchemy-utils>=0.36.3',
+            'sqlalchemy-utils>=0.37',
             'flake8',
             'restructuredtext-lint',
             'Pygments',

@@ -2,8 +2,9 @@
 import pytest
 from sqlalchemy.orm import joinedload
 
-from sqlalchemy_filters import apply_loads
-from sqlalchemy_filters.exceptions import BadLoadFormat, BadSpec, FieldNotFound
+from sqlalchemy_filters_2 import apply_loads
+from sqlalchemy_filters_2.exceptions import BadLoadFormat,\
+    BadSpec, FieldNotFound
 from test.models import Foo, Bar
 from test import error_value
 
