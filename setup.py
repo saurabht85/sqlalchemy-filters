@@ -12,12 +12,12 @@ with open(os.path.join(here, 'README.rst'), 'r', 'utf-8') as handle:
 
 setup(
     name='sqlalchemy-filters-2',
-    version='0.1.0',
+    version='0.2.0',
     description='A library to filter SQLAlchemy queries.',
     long_description=readme,
     long_description_content_type='text/x-rst',
     author='Saurabh',
-    author_email='tewary.saurabh@hotmail.com',
+    author_email='tewary.saurabh@hotmail.com, drg0072@gmail.com',
     url='https://github.com/saurabht85/sqlalchemy-filters',
     packages=find_packages(exclude=['test', 'test.*']),
     install_requires=['sqlalchemy>=1.4.0', 'six>=1.10.0'],

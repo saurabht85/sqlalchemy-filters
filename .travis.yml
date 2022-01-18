@@ -15,11 +15,27 @@ install:
 
 matrix:
   include:
+    - python: 3.7
+      env: TOX_ENV="py37-sqlalchemy1.4"
+    - python: 3.7
+      env: TOX_ENV="py37-sqlalchemylatest"
+
+    - python: 3.8
+      env: TOX_ENV="py38-sqlalchemy1.4"
     - python: 3.8
       env: TOX_ENV="py38-sqlalchemylatest"
 
     - stage: deploy
       script: skip
+      deploy:
+        provider: pypi
+        user: drg0072
+        password:
+          secure: "pypi-AgEIcHlwaS5vcmcCJGMzNGEwMmIwLWI4ZTMtNDc5Ni05ZmFkLTc3OWQ0ZDRhYzFlZgACRXsicGVybWlzc2lvbnMiOiB7InByb2plY3RzIjogWyJzcWxhbGNoZW15LWZpbHRlcnMtMiJdfSwgInZlcnNpb24iOiAxfQAABiAf2X4YdTIG-2Dd6Cg3DX0t_71k9RywmwsnW_kp5UyL2w"
+        on:
+          tags: true
+          repo: drg0072/sqlalchemy-filters-2
+        distributions: "sdist bdist_wheel"
 
 script:
   - tox -e $TOX_ENV

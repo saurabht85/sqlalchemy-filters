@@ -96,7 +96,7 @@ def get_query_models(query):
                 model_class = get_model_from_table(table_tuple[0])
                 if model_class:
                     models.append(model_class)
-
+    models = [model for model in models if model is not None]
     # account also query.select_from entities
     model_class = None
     if sqlalchemy_version_lt('1.4'):  # pragma: nocover
